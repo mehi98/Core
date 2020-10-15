@@ -1,0 +1,13 @@
+﻿@model IEnumerable<MyCms.ShowGroupsViewModel>
+<ul>
+    <li><a href="/"> صفحه اصلی </a></li>
+    <li>
+        <span>گروه های خبری</span>
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li><a href="Group/@item.Groupid/@item.GroupTitle">@item.GroupTitle</a></li>
+            }
+        </ul>
+    </li>
+</ul>

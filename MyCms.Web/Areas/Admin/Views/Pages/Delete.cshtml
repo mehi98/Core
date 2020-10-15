@@ -1,0 +1,44 @@
+﻿@model MyCms.DataLayer.Page
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<h3>آیا از حذف خبر اطمینان دارید؟</h3>
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PageTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PageTitle)
+        </dd>
+    
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ImageName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PageTags)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PageTags)
+        </dd>
+      
+        <dt>
+            @Html.DisplayNameFor(model => model.PageGroup.GroupTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PageGroup.GroupTitle)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="PageID" />
+        <input type="submit" value="حذف" class="btn btn-danger" /> |
+    </form>
+</div>

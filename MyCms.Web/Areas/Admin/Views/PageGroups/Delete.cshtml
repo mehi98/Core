@@ -1,0 +1,19 @@
+﻿@model MyCms.DataLayer.PageGroup.PageGroup
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<h3>آیا از حذف {@Model.GroupTitle}مطمن هستید؟</h3>
+<div>
+    
+    <dl class="dl-horizontal">
+   
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="GroupID" />
+        <input type="submit" value="حذف" class="btn btn-danger" /> 
+    </form>
+</div>
